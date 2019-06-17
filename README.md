@@ -1,0 +1,2 @@
+# H5-Alipay-Official-website
+H5文字滚动的效果，如侵权请联系删除（If infringement please contact delete）
