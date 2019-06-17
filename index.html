@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="baidu-site-verification" content="OyUb4RVdSe" />
+    <meta name="renderer" content="webkit" />
+    <title>支付宝 知托付！</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-size: 100%;
+        }
+
+        ul, ol, li {
+            list-style: none;
+        }
+
+        em, i {
+            font-style: normal;
+        }
+
+        img {
+            border: none;
+        }
+
+        input, img {
+            vertical-align: middle;
+        }
+
+        body {
+            background: #fff;
+            color: #666;
+            font-size: 14px;
+            font-family: arial;
+        }
+
+        a {
+            color: #666666;
+            text-decoration: none;
+        }
+
+        html, body {
+            background: #f9f9f9;
+            width: 100%;
+            height: 100%;
+            font-family: Helvetica, sans-serif;
+            -webkit-text-size-adjust: none;
+        }
+
+        * {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        textarea.fixAndroidKeyboard:focus, input.fixAKeyboard:focus {
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+            -webkit-user-modify: read-write-plaintext-only;
+        }
+
+        .noscroll {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+  
+        .app-dom {
+            width: 100%;
+        }
+
+        .clearfix:after {
+            display: block;
+            content: '';
+            clear: both;
+            visibility: hidden;
+        }
+    </style>
+
+    <style>
+
+        body {
+            font: 12px/1.5 "Microsoft YaHei", tahoma, arial, Hiragino Sans GB, \5b8b\4f53;
+            overflow: hidden;
+            position: relative;
+            height: 100%;
+            width: 100%;
+  /*            background: url('https://img.alicdn.com/tps/TB1sXGYIFXXXXc5XpXXXXXXXXXX.jpg'); */
+  transition: 0.7s;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .header {
+            position: fixed;
+            width: 100%;
+            top: 20px;
+            left: 0px;
+            z-index: 999;
+        }
+
+        .nav {
+            width: 80%;
+            height: 30px;
+            line-height: 30px;
+            margin: 0 auto;
+        }
+
+
+        .logo {
+            float: left;
+            background-image: url(https://img.alicdn.com/tps/TB17ghmIFXXXXXAXFXXXXXXXXXX.png);
+            display: block;
+            width: 70px;
+            height: 25px;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: 70px;
+        }
+
+        .entry {
+            float: right;
+            color: #fff;
+        }
+
+        .entry .state {
+            color: #bfbfbf;
+        }
+
+        .entry a {
+            font-size: 12px;
+            color: #fff;
+            margin: 0 5px;
+        }
+
+        .entry a:hover {
+            color: #00bbee;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+           
+        }
+
+        .content {
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;;
+        }
+
+        .wrap {
+            position: absolute;
+            left: 0;
+            top: 20%;
+            width: 100%;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .slogan {
+            width: 600px;
+            height: 200px;
+            background: url(https://img.alicdn.com/tps/TB1POhqIFXXXXXbXFXXXXXXXXXX.png) no-repeat 0 0;
+            display: inline-block;
+            background-size: 600px;
+        }
+
+        .mid {
+            width: 100%;
+        }
+
+        .main-entry {
+            width: 550px;
+            height: 50px;
+            margin: 15px auto 0;
+        }
+
+        .main-entry a {
+            display: block;
+            text-decoration: none;
+            float: left;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            height: 50px;
+            width: 170px;
+            color: #ffffff;
+            line-height: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-entry a .title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            padding-left: 18px;
+        }
+
+        .main-entry a .title i {
+            position: absolute;
+            left: 20px;
+            top: 14px;
+            display: block;
+            width: 24px;
+            height: 24px;
+            background-size: 24px;
+        }
+
+        .main-entry s {
+            background-color: #00a3ee;
+            opacity: .9;
+            display: block;
+            border-radius: 8px;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+        }
+
+        .main-entry a:hover s {
+            background-color: #00aaee;
+            opacity: 1;
+        }
+
+        a.personal-login,
+        a.seller-login
+        {
+            margin-left: 20px;
+            transition: all .3s ease-in-out;
+            -webkit-transition: all .3s ease-in-out;
+            -moz-transition: all .3s ease-in-out;
+            -o-transition: all .3s ease-in-out;
+        }
+        a.seller-login .seller-entry {
+            display: none;
+            z-index: 2;
+            position: relative;
+            height: 50px;
+        }
+        a.seller-login .inerval-line {
+            display: none;
+            width: 150px;
+            margin: 0 auto;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            height: 0;
+            z-index: 2;
+        }
+        a.seller-login:hover{
+            height: 100px;
+            margin-top: -25px;
+        }
+        a.seller-login:hover .title{
+            display: none;
+        }
+        a.seller-login:hover .seller-entry,
+        a.seller-login:hover .inerval-line
+        {
+            display: block;
+        }
+
+        .alipay-app {
+            text-align: center;
+            position: absolute;
+            bottom: 70px;
+            left: 0;
+            z-index: 3;
+            width: 100%;
+        }
+
+        .alipay-app .ma {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        .alipay-app img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .alipay-app p {
+            line-height: 30px;
+            height: 30px;
+            color: #ffffff;
+            margin: 5px 0 10px;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            height: 65px;
+            background-color: white;
+            z-index: 99;
+        }
+
+        .nav-links {
+            width: 99%;
+            height: 20px;
+            margin: 0 auto;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .footer ul {
+            padding-left: 5px;
+        }
+
+        .footer li {
+            display: inline-block;
+            margin: 2px;
+        }
+
+        .footer li a {
+            color: #666;
+        }
+
+        .ownership {
+            text-align: center;
+            height: 20px;
+            line-height: 25px;
+        }
+
+        .nav-icons {
+            width: 250px;
+            height: 30px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .nav-icons a {
+            width: 20px;
+            display: block;
+            float: left;
+            margin-right: 5px;
+            height: 28px;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="header">
+        <div class="nav">
+            <div class="logo"></div>
+            <div class="entry">
+                
+                <span class="state">我已有支付宝账户</span>
+				
+                	<a href="login.html" target="_self" seed="">快速登录</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="wrap">
+                <div class="slogan"></div>
+                <div class="mid">
+                    <div class="main-entry">
+                        <a href="#" class="developer-login"><span class="title"><i
+                                class="developer"></i>我是开发者</span><s></s></a>
+                        <a href="javascript:;" class="seller-login">
+                            <span class="title"><i class="seller"></i>我是商家用户</span>
+                            <span class="seller-entry alipay">我是支付宝商家</span>
+                            <span class="inerval-line"></span>
+                            <span class="seller-entry koubei">我是口碑商家</span><s></s>
+                        </a>
+                        <a href="javascript:;" class="personal-login"><span class="title"><i
+                                class="personal"></i>我是个人用户</span><s></s></a>
+                    </div>
+                </div>
+            </div>
+        </div>	
+        </div>
+    </div>
+    <div class="footer">
+ 		
+        <div class="nav-links">
+            <ul>
+                <li><a href="http://www.antgroup.com" target="_blank" seed="">蚂蚁金服集团</a></li>
+                <li>|</li>
+                <li><a href="https://www.alipay.com" target="_blank" seed="">支付宝</a></li>
+                <li>|</li>
+                <li><a href="https://yebprod.alipay.com/yeb/index.htm" target="_blank" seed="">余额宝</a></li>
+                <li>|</li>
+                <li><a href="https://zhaocaibao.alipay.com/" target="_blank" seed="">招财宝</a></li>
+                <li>|</li>
+                <li><a href="https://b.alipay.com/?ynsrc=zhuzhanA" target="_blank" seed="">蚂蚁商家中心</a></li>
+                <li>|</li>
+                <li><a href="https://b.zmxy.com.cn/index.htm?scene=alipay" target="_blank" seed="">芝麻信用</a></li>
+                <li>|</li>
+                <li><a href="https://www.aliloan.com/" target="_blank" seed="">蚂蚁微贷</a></li>
+                <li>|</li>
+                <li><a href="https://www.mybank.cn/index.htm" target="_blank" seed="">网商银行</a></li>
+                <li>|</li>
+                <li><a href="https://open.alipay.com/platform/home.htm?from=zhuzhanfooter20160818 " target="_blank" seed="">开放平台</a></li>
+                <li>|</li>
+                <li><a href="https://job.alibaba.com/index.php" target="_blank" seed="">诚征英才</a></li>
+                <li>|</li>
+                <li><a href="https://ab.alipay.com/i/lianxi.htm" target="_blank" seed="">联系我们</a></li>
+                <li>|</li>
+                <li><a href="https://global.alipay.com/ospay/home.htm" target="_blank" seed="">International Business</a></li>
+
+            </ul>
+        </div>
+        <div class="ownership">
+            <span>支付宝版权所有 2004-2017 ICP证：沪B2-20150087模拟支付宝官网</span>
+        </div>
+        <div class="nav-icons">
+            <a href="https://fun.alipay.com/certificate/zfxkz.htm" class="pic1" target="_blank"></a>
+            <a href="https://sealinfo.verisign.com/splash?form_file=fdf/splash.fdf&dn=WWW.ALIPAY.COM&zh_cn" class="pic2" target="_blank"></a>
+            <a href="javascript:;" class="pic3" target="_blank"></a>
+            <a href="http://zjnet.zjaic.gov.cn/sign/addSignOnline.action" class="pic4" target="_blank"></a>
+            <a href="https://fun.alipay.com/certificate/index.htm" class="pic7" target="_blank"></a>
+        </div>
+    </div>
+</div>
+<script>
+    var img=["https://img.alicdn.com/tps/TB1sXGYIFXXXXc5XpXXXXXXXXXX.jpg","https://img.alicdn.com/tps/TB1pfG4IFXXXXc6XXXXXXXXXXXX.jpg","https://img.alicdn.com/tps/TB1h9xxIFXXXXbKXXXXXXXXXXXX.jpg"];
+    var ind=0;
+    setInterval(function() {
+     document.body.style.background ="url("+img[ind]+")";
+          ind++;
+        if (ind>2) {
+            ind=0;
+        }
+    }, 1700)
+ 
+</script>
+</body>
+</html>
